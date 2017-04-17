@@ -1,0 +1,203 @@
+.body {
+	font-family: Helvetica Neue, Helvetica, sans-serif;  
+	height: 100%;
+	overflow: hidden;
+	background: #212121;
+
+}
+p{
+	text-align: center !important;
+}
+
+
+.menu{
+	
+	margin: 12px 0px;
+}
+.container-fluid {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 0.5px !important;
+}
+.btn {
+	font-size: 10px;
+
+}
+@media screen and (min-width: 768px){
+.menu{
+    transform: skew(-25deg);
+}    
+.choice{
+    transform: skew(25deg);
+}
+
+.menu .menu-button:first-child {
+	border-radius: 9px 0 0 9px;
+}
+
+.menu .menu-button:last-child {
+	border-right: none;
+	border-radius: 0 9px 9px 0;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+.navbar-nav>li>a {
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+}
+.navbar-nav > li >a {
+	text-shadow: none !important;
+}
+
+
+.navbar-default{
+
+	background: #212121;
+
+
+
+}
+
+.navbar{
+	border: none;
+	margin: 0;
+}
+
+.navbar-brand{
+	/* height: 130px; */
+	padding: 0px;
+}
+
+.menu-button {
+	background: rgba(103, 103, 103, 0.58);
+	border-right: 1px solid #2b3740;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	text-transform: uppercase;
+	color: #555;
+	font-weight: bolder;
+	transition: all 0.5s linear;
+}
+
+
+.menu-button:hover .choice {  
+	color: #51a593 !important;
+}
+
+.menu-button:hover{
+	background: rgba(36, 41, 41, 0.83) !important;
+}
+
+.menu .menu-button .choice {
+
+	color:#050c17;
+	text-decoration: none;
+	background: transparent;
+}	
+
+
+.navbar-default .navbar-nav>.open>a:active, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {    
+	background: transparent !important;
+	
+}
+
+a, .site-link a:visited{
+	color: #51a593;
+	font-size: 10px;
+	font-family: arial, sans-serif;
+	margin-right: 10%;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.images{
+	margin-bottom: 6px;	
+}
+
+.footer-bar{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background: #212121;
+	border-top: 2px solid #888888;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	text-align: center;
+}
+
+.footer-bar-home{
+	width: 100%;
+	height: 50px;
+	line-height: 40px;
+	background: #23292f;
+	border-top: 2px solid #111111;
+	bottom: 0;
+	left: 0;
+}
+.footer-bar .article-wrapper,
+.footer-bar-home .article-wrapper {
+	font-family: arial, "Telugu Sangam MN";
+	font-style: normal;
+	font-size: 5px;
+	color: #c9e5ff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	background: #212121;
+}
+.footer-bar .article-link a,.footer-bar .article-link a:visited {
+	text-decoration: none;
+	color: #fff;	
+}
+.logo{
+	padding-right: 0 !important;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+
+
+
+
+
+

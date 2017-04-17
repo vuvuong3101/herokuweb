@@ -1,0 +1,122 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HiddenPassion</title>
+    <link href="../static/css/demo.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="../static/img/icon.png" type="image/x-ico"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        function SiteMusic(linkdata,buttondata) {
+            var index = Math.floor(Math.random()*buttondata['music'].length);
+            var sites = linkdata[buttondata['music'][index]];
+            document.getElementById('myIframe').src = sites;
+        }
+        function SiteMovie(linkdata,buttondata) {
+            var index = Math.floor(Math.random()*buttondata['movie'].length);
+            var sites = linkdata[buttondata['movie'][index]];
+            document.getElementById('myIframe').src = sites;
+        }
+        function SiteBook(linkdata,buttondata) {
+            var index = Math.floor(Math.random()*buttondata['book'].length);
+            var sites = linkdata[buttondata['book'][index]];
+            document.getElementById('myIframe').src = sites;
+        }
+        function SiteClip(linkdata,buttondata) {
+            var index = Math.floor(Math.random()*buttondata['clip'].length);
+            var sites = linkdata[buttondata['clip'][index]];
+            document.getElementById('myIframe').src = sites;
+        }
+
+    </script>
+    <style type="text/css">
+        body, html
+        {
+            margin: 0; padding: 0; height: 100%; overflow: hidden;
+        }
+        #header
+        {
+            position:absolute;
+            left: 0; top: 0; right: 0;
+            background: lightblue ;
+            padding-top: 0;
+        }
+        #content
+        {
+            position:absolute;
+            left: 0; right: 0; bottom: 0; top: 109px;
+            background: #ffffff;
+            height: expression(document.body.clientHeight - 90);
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+
+
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="header">
+    <img class="image" src="../static/img/logo_index.png" alt="logo" />
+    <nav class="skew-menu">
+        <!--<li><img src="img/backg2d.png" alt=""/></li>-->
+        <ul >
+            <!--<li>-->
+                <!--<a class="btn" style="margin: 0px 0px 0px 10px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteMusic({{ link_item }}, {{ button }})" >-->
+                    <!--<img src="img/home.png" width="25" height="20" />   HOME-->
+                <!--</a></li>-->
+            <li>
+                <a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteMusic({{ link_item }}, {{ button }})" >
+                    <img src="../static/img/headphone.png" width="25" height="20"/>   MUSICS
+                </a></li>
+            <li>
+                <a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteMovie({{ link_item }}, {{ button }})" >
+                    <img src="../static/img/Film.png" width="25" height="20"/>   MOVIES
+                </a></li>
+            <li>
+                <a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteClip({{ link_item }}, {{ button }})" >
+                    <img src="../static/img/clip.png" width="27" height="20"/>   CLIPS
+                </a></li>
+            <li>
+                <a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteBook({{ link_item }}, {{ button }})" >
+                    <img src="../static/img/Books.png" width="25" height="20"/>   BOOKS
+                </a></li>
+            <!--<li>-->
+                <!--<a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteMusic(link_item)" >-->
+                    <!--<img src="img/newsicon.png" width="25" height="20" />   NEWS-->
+                <!--</a></li>-->
+            <!--TREN DUNG-->
+            <!--<li><a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteMovie()" ><img src="img/food.png" width="30" height="25"/>   FOODS</a></li>-->
+            <!--&lt;!&ndash;<li><a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteBook()" ><img src="img/Books.png" width="25" height="25"/>   BOOKS</a></li>&ndash;&gt;-->
+            <!--<li><a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteClip()" ><img src="img/clip.png" width="32" height="25"/>   CLIPS</a></li>-->
+            <!--<li><a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteMovie()" ><img src="img/Film.png" width="25" height="25"/>   MOVIES</a></li>-->
+            <!--<li><a class="btn" style="margin: 0px 0px" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"  onClick="SiteBook()" ><img src="img/Books.png" width="25" height="25"/>   BOOKS</a></li>-->
+            <!--<right><div style="right: inherit" class="fb-share-button" data-href="https://facebook.com" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"></a></div></right>-->
+        </ul>
+    </nav>
+    <div class="clear"></div>    
+</div>
+
+<div id="content">
+    <iframe width="100%" height="96%" id="myIframe" src="" name="tree" onLoad="IframeDidload" frameborder="0"></iframe>
+
+
+    <div class="footer-bar">
+    <span class="article-wrapper">
+        <span class="article-label">CopyRight 2017 by Team 4M  </span>
+    </span>
+
+    </div>
+</div>
+
+
+
+
+</body>

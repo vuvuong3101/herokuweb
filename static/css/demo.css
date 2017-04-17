@@ -1,0 +1,105 @@
+body {
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+	background: #C0C0C0;
+}
+.v-head{
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+	background: #008080;
+
+}
+.right{
+	text-align: right;
+}
+.center{
+	text-align: center;
+}
+.left{
+	text-align: left;
+}
+.p {
+	margin-top: 2px;
+}
+.clear{
+	clear: both;
+}
+.skew-menu {	
+	float: right;		
+}
+
+.skew-menu ul {
+	display: inline-block;
+	margin: 35px 20px;
+	padding: 0;
+	list-style: none;
+	transform: skew(-25deg);
+}
+.skew-menu ul li {
+	background: #fff;
+	float: left;
+	border-right: 1px solid #eee;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	text-transform: uppercase;
+	color: #555;
+	font-weight: bolder;
+	transition: all 0.3s linear;
+}
+.skew-menu ul li:first-child {
+	border-radius: 9px 0 0 9px;
+}
+.skew-menu ul li:last-child {
+	border-right: none;
+	border-radius: 0 9px 9px 0;
+}
+.skew-menu ul li:hover {
+	background: #eee;
+	color: #ff6347;
+}
+.skew-menu ul li a {
+	display: block;
+	padding: 1em 1em;
+	color: inherit;
+	text-decoration: none;
+	transform: skew(25deg);
+}
+
+/*Thats all. I hope you enjoyed it.
+Thanks :)*/
+/***************************************************************/
+/*************** Footer Bar Style ******************************/
+/***************************************************************/
+.footer-bar
+{
+
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+	background: #111;
+	border-top: 3px solid #111111;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.footer-bar .article-wrapper{
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	color: #888;
+	float: left;
+	margin-left: 3%;
+}
+.footer-bar .article-link a, .footer-bar .article-link a:visited{
+	text-decoration: none;
+	color: #fff;
+}
+a, .site-link a:visited{
+	color: #888;
+	font-size: 10px;
+	font-family: arial, sans-serif;
+	
+	margin-right: 10%;
+	text-decoration: none;
+	cursor: pointer;
+
+}
+.site-link a:hover{
+	color: #E62600;
+}

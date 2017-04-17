@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HIDDENPASSION</title>
+	<link rel="shortcut icon" href="../static/img/icon2.png" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<style type="text/css">
+		body, html
+		{
+			margin: 0; padding: 0; height: 100%; overflow: hidden;
+		}
+
+		#header
+		{
+			position:absolute;
+			left: 0; top: 0; right: 0;
+			background: lightblue ;
+			padding-top: 0;
+		}
+
+		#content
+		{
+			position:absolute;
+			left: 0; right: 0; bottom: 0; top: 109px;
+			background: #ffffff;
+			height: expression(document.body.clientHeight - 90);
+		}
+		#loading {
+			position: fixed;
+			left: 42%;
+			top: 40%;
+			background: #eee url(../static/img/loading_bar.gif) no-repeat center 70%;
+			height: 50px;
+			width: 150px;
+			text-align: center;
+			padding-top: 20px;
+			border-radius: 8px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			color: #0ff0ff;
+		}
+
+	</style>
+
+
+
+	<script type="application/javascript">
+
+		function resizeIFrameToFitContent( iFrame ) {
+
+			iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+			iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+		}
+
+		window.addEventListener('DOMContentReady', function(e) {
+
+			var iFrame = document.getElementById( 'iFrame1' );
+			resizeIFrameToFitContent( iFrame );
+
+		// or, to resize all iframes:
+		var iframes = document.querySelectorAll("iframe");
+		for( var i = 0; i < iframes.length; i++) {
+			resizeIFrameToFitContent( iframes[i] );
+		}
+	} );
+
+</script>
+<link rel="stylesheet" href="../static/css/css2/style.css" media="screen" type="text/css" />
+</head>
+<body class="body" onLoad="init()" style="background-color: none;">
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="navbar navbar-default" role="navigation">			
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#" style="margin-bottom: 0px;">
+							<img class="logo" src="../static/img/logo_cam.png" alt="logo" width="100%" style="padding-top: 3px; padding-left: 10px;">
+						</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-ex1-collapse">				
+						<ul class="nav navbar-nav navbar-right menu">					
+							<li class="menu-button">
+
+								<a class="btn choice" href="#" onClick="Play(); SiteHome({{ link_item }}, {{ button }})">
+									<img style="margin-bottom: 4px;" src="../static/img/home.png" width="20" height="15" />
+									<span class="tooltiptext">Home</span>
+
+								</a>
+							</li>
+
+
+							<li class="menu-button">
+								<a class="btn choice" href="#" onClick="Play(); SiteMusic({{ link_item }}, {{ button }})">
+									<img src="../static/img/headphone.png" width="20" height="15" style="margin-bottom: 4px;"/> Musics
+								</a>
+							</li>
+
+							<li class="menu-button">
+								<a class="btn choice" href="#" onClick="Play(); SiteMovie({{ link_item }}, {{ button }})">
+									<img src="../static/img/iconmovie.png" width="20" height="15" style="margin-bottom: 4px;"/> Movies
+								</a>
+							</li>
+
+							<li class="menu-button">
+								<a class="btn choice" href="#" onClick="Play(); SiteBook({{ link_item }}, {{ button }})">
+									<img src="../static/img/Books.png" width="20" height="15" style="margin-bottom: 4px;"/> Books
+								</a>
+							</li>
+
+							<li class="menu-button">
+								<a class="btn choice" href="#" onClick="Play(); SiteClip({{ link_item }}, {{ button }})">
+									<img src="../static/img/iconclip.png" width="20" height="15" style="margin-bottom: 4px;"/> Clips
+								</a>
+							</li>
+
+							<li class="menu-button">
+								<a class="btn choice" href="#" onClick="Play(); SiteSpecial({{ link_item }}, {{ button }})">
+									<img src="../static/img/icon_spe.png" width="20" height="15" style="margin-bottom: 4px;"/> Special
+								</a>
+							</li>
+						</ul>
+
+					</div><!-- /.navbar-collapse -->			
+				</nav>
+			</div>	
+		</div>
+
+		<div class="container-fluid" id="banner" style="display: block; padding-top:  50px">
+			<div class="row" style="height: auto">
+				<div id="carousel-id" class="carousel slide" data-ride="carousel" style="margin: 0px 0px">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-id" data-slide-to="0" class=""></li>
+						<li data-target="#carousel-id" data-slide-to="1" class=""></li>
+						<li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item">
+							<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="../static/img/billboard_img.png" width="100%">
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>Example headline.</h1>
+									<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+									<p><a class="btn btn-lg btn-primary" href="#" onClick="Play(); SiteMusic()" role="button" style="margin-right: 0px">Start Here</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="../static/img/billboard_img.png" width="100%">
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>Another example headline.</h1>
+									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+									<p><a class="btn btn-lg btn-primary" href="#" onClick="Play(); SiteMovie()" role="button" style="margin-right: 0px">Start Here</a></p>/<center>
+								</div>
+							</div>
+						</div>
+						<div class="item active">
+							<img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="../static/img/billboard_img.png" width="100%">
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>One more for good measure.</h1>
+									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+									<p><a class="btn btn-lg btn-primary" href="#" onClick="Play(); SiteSpecial()" role="button" style="margin-right: 0px">Start Here</a></div>
+									</div>
+								</div>
+							</div>
+							<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+							<a class="right carousel-control" href="#carousel-id" data-slide="next" style="margin-right:0px"><span class="glyphicon glyphicon-chevron-right"></span></a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="container-fluid" id="iframe" style="display: block" >
+					<div class="row">
+						<iframe id='myIframe' src="" name="tree" onload="resizeIFrameToFitContent(iframe)" frameborder="0" scrolling="0" allowfullscreen="true" style="overflow: inherit; height: 91%;
+						width: 100%; position: absolute;" height="94%" width="98%"></iframe>
+
+
+
+						<!--<iframe width="100%" height="96%" id="myIframe" src="" name="tree" onLoad="IframeDidload" frameborder="0" scrolling="0" onload="resizeIframe(this)"></iframe>-->
+					</div>
+				</div>
+				<div class="article-wrapper">
+
+				<div class="footer-bar">
+
+					<span class="article-label">Designed by Team 4M</span>
+					</div>
+				</div>
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<script type="text/javascript">
+					function SiteHome(linkdata,buttondata) {
+						var index = Math.floor(Math.random()*linkdata.length);
+						var sites = linkdata[index];
+						document.getElementById('myIframe').src = sites;
+					}
+					function SiteMusic(linkdata,buttondata) {
+						var index = Math.floor(Math.random()*buttondata['music'].length);
+						var sites = linkdata[buttondata['music'][index]];
+						document.getElementById('myIframe').src = sites;
+					}
+					function SiteMovie(linkdata,buttondata) {
+						var index = Math.floor(Math.random()*buttondata['movie'].length);
+						var sites = linkdata[buttondata['movie'][index]];
+						document.getElementById('myIframe').src = sites;
+					}
+					function SiteBook(linkdata,buttondata) {
+						var index = Math.floor(Math.random()*buttondata['book'].length);
+						var sites = linkdata[buttondata['book'][index]];
+						document.getElementById('myIframe').src = sites;
+					}
+					function SiteClip(linkdata,buttondata) {
+						var index = Math.floor(Math.random()*buttondata['clip'].length);
+						var sites = linkdata[buttondata['clip'][index]];
+						document.getElementById('myIframe').src = sites;
+					}
+					function SiteSpecial(linkdata,buttondata) {
+						var index = Math.floor(Math.random()*linkdata.length);
+						var sites = linkdata[index];
+						document.getElementById('myIframe').src = sites;
+					}
+
+					(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+						fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));
+
+
+					function Play(){
+						document.getElementById('banner').style = "display: none";
+						document.getElementById('iframe').style = "display: block";
+					}
+
+</script>
+
+
+</body>
+
+
+</html>
